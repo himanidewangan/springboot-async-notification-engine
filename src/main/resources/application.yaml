@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: notification-system
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/notification_system
+    username: root
+    password: MySql@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+    producer:
+      retries: 3
+server:
+  port: 8080
