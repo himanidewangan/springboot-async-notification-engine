@@ -2,8 +2,7 @@ package com.himani.notification_system.controller;
 
 import com.himani.notification_system.kafka.KafkaProducerService;
 import com.himani.notification_system.model.Transaction;
-import com.himani.notification_system.queue.NotificationQueue;
-import com.himani.notification_system.service.NotificationService;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
